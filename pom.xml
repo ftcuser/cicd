@@ -44,7 +44,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-  <plugin>            
+                 <reporting>
+                          <plugins>
+                                    <plugin>            
 <groupId>org.codehaus.mojo</groupId>
   <artifactId>findbugs-maven-plugin</artifactId>
    <version>3.0.6-SNAPSHOT</version>
@@ -53,6 +55,7 @@
  <includefilterFile>spotbug-include.xml</includefilterFile>
  </configuration>                                                                                                                                                                
 </plugin>
+                 </reporting>
   </plugins>
     </build>
 </project>
