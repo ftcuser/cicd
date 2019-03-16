@@ -1,1 +1,2 @@
-FROM jenkins:2.60.3
+FROM jenkinsci/blueocean
+COPY backup/jenkins /var/jenkins_home/
