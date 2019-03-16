@@ -1,3 +1,7 @@
+/*
+Author Rupesh Kumar
+*/
+
 def CONTAINER_NAME="jenkins-pipeline"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="ftchub"
