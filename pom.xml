@@ -39,23 +39,22 @@
 
     <build>
         <finalName>${project.artifactId}</finalName>
+        <reporting>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-                 <reporting>
-                          <plugins>
-                                    <plugin>            
-<groupId>org.codehaus.mojo</groupId>
-  <artifactId>findbugs-maven-plugin</artifactId>
-   <version>3.0.6-SNAPSHOT</version>
-   <configuration>
- <excludefilterFile>spotbug-exclude.xml</excludefilterFile>
- <includefilterFile>spotbug-include.xml</includefilterFile>
- </configuration>                                                                                                                                                                
-</plugin>
-                 </reporting>
+        <plugin>            
+         <groupId>org.codehaus.mojo</groupId>
+           <artifactId>findbugs-maven-plugin</artifactId>
+            <version>3.0.6-SNAPSHOT</version>
+            <configuration>
+          <excludefilterFile>spotbug-exclude.xml</excludefilterFile>
+          <includefilterFile>spotbug-include.xml</includefilterFile>
+          </configuration>                                                                                                                                                                
+         </plugin>
   </plugins>
+             </reporting>
     </build>
 </project>
