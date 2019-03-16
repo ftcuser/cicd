@@ -71,7 +71,6 @@
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
                 <configuration>
-                    <excludeFilterFile>${basedir}/config/spotbugs-exclude.xml</excludeFilterFile>
                     <effort>Max</effort>
                     <threshold>Medium</threshold>
                     <spotbugsXmlOutput>true</spotbugsXmlOutput>
