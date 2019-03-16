@@ -13,7 +13,7 @@
         <sonar.host.url>http://sonarqube:9000</sonar.host.url>
         <java.version>1.8</java.version>
 	<mockito-core.version>2.23.4</mockito-core.version>
-	<junit.version>4.11</junit.version>
+	<junit.version>4.12</junit.version>
         <concurrency>2</concurrency>
         <skipUTs>false</skipUTs>
 	<skipITs>true</skipITs>
@@ -34,12 +34,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-	    <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <optional>true</optional>
-	</dependency>
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>${junit.version}</version>
+    <scope>test</scope>
+</dependency>
         <dependency>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
