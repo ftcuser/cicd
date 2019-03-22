@@ -113,9 +113,6 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
-                    <excludes>
-                        <exclude>InjectedTest.java</exclude>
-                    </excludes>
                     <argLine>@{argLine}</argLine>
                     <skipTests>${skipUTs}</skipTests>
                 </configuration>
@@ -126,7 +123,6 @@
                 <configuration>
                     <includes>
                         <include>**/*IT.java</include>
-                        <include>InjectedTest.java</include>
                     </includes>
                     <argLine>@{argLine}</argLine>
                     <reuseForks>true</reuseForks>
@@ -173,12 +169,11 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <excludes>
-                                <exclude>**/*Integration.java</exclude>
-                                <exclude>**/*Int.java</exclude>
+                                <exclude>**/*IT.java</exclude>
                             </excludes>
                             <!-- Run only tests whose name contains with "Test" -->
                             <includes>
-                                <include>**/*Test*.java</include>
+                                <include>**/*Test.java</include>
                             </includes>
                         </configuration>
                     </plugin>
