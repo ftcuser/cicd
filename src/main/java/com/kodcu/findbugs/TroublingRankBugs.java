@@ -1,4 +1,4 @@
-package com.kodcu.findbugs
+package com.kodcu.findbugs;
 
 /**
  * Troubling Rank Bugs Sample.
