@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = )
+@SpringBootTest(classes = SpringBootHelloWorldApplication.class )
 public class HelloWorldControllerTest {
 
     @Autowired
