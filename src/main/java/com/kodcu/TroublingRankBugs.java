@@ -1,3 +1,4 @@
+package com.kodcu;
 
 /**
  * Troubling Rank Bugs Sample.
