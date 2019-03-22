@@ -34,7 +34,7 @@ public class HelloWorldControllerTest {
 }
 */
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest(classes = SpringBootHelloWorldApplication.class )
 @WebAppConfiguration
 
