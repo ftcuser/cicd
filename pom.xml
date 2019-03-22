@@ -147,4 +147,26 @@
         </plugin>
   </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>unit</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/*Integration.java</exclude>
+                                <exclude>**/*Int.java</exclude>
+                            </excludes>
+                            <!-- Run only tests whose name contains with "Test" -->
+                            <includes>
+                                <include>**/*Test*.java</include>
+                            </includes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+</profiles>
 </project>
