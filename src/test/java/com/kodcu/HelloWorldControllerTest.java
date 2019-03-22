@@ -1,4 +1,4 @@
-package com.kodcu.controller;
+package com.kodcu;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
