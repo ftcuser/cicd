@@ -5,7 +5,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@SpringBootTest(classes = SpringJenkinsPipelineApplication.class)
+@SpringBootTest(classes = SpringBootHelloWorldApplication.class)
 public class SpringBootHelloWorldTests {
 
 	@Test
