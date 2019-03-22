@@ -24,6 +24,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = SpringBootHelloWorldApplication.class )
+@WebAppConfiguration
+public class SpringBootWebApplicationTests {
+
+	@Test
+	public void contextLoads() {
+	}
+
+}
+/*
 public class HelloWorldControllerTest {
 
     @Autowired
@@ -36,3 +45,4 @@ public class HelloWorldControllerTest {
                 .andExpect(content().string(equalTo("hello world")));
     }
 }
+*/
