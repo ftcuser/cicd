@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HelloWorldController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getPage(){
+    public String getHello(){
         return "hello world";
     }
 }
