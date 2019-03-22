@@ -25,7 +25,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@AutoConfigureMockMv
 public class HelloWorldControllerTests {
 
    @Autowired
