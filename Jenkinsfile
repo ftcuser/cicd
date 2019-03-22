@@ -1,13 +1,8 @@
-/*
-Author Rupesh Kumar
-*/
-
 def CONTAINER_NAME="jenkins-pipeline"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="ftchub"
 def HTTP_PORT="8090"
 
-// Only keep the 7 most recent builds
 properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '7']]])
 
 node {
@@ -30,11 +25,13 @@ node {
     }
 
     stage('Junit Test'){
-         //step([$class: 'JUnitResultArchiver', testResults: 'target/surefire-reports/TEST-*.xml'])
+        sh "mvn clean test -Punit"
+        sh "cd $WORKSPACE"
+         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
     }
 
     stage('Code Coverage'){
-        //step([$class: 'JacocoPublisher', execPattern: 'target/jacoco.exec', exclusionPattern: '**/classes'])
+        step([$class: 'JacocoPublisher', execPattern: '**/target/jacoco.exec', exclusionPattern: '**/classes'])
     }
     
     stage('Quality Scan'){
@@ -64,6 +61,12 @@ node {
         findbugs canComputeNew: false, defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', pattern: '**/target/spotbugsXml.xml', unHealthy: ''    
         //def spotbugs = scanForIssues tool: [$class: 'SpotBugs'], pattern: '**/target/spotbugsXml.xml'
         //publishIssues issues:[spotbugs]
+        
+        //OWASP scanning
+        
+        dependencyCheckAnalyzer datadir: '', hintsFile: '', includeCsvReports: false, includeHtmlReports: true, includeJsonReports: false, includeVulnReports: true, isAutoupdateDisabled: false, outdir: '', scanpath: '**/*.jar', skipOnScmChange: false, skipOnUpstreamChange: false, suppressionFile: '', zipExtensions: ''
+
+        dependencyCheckPublisher canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '**/dependency-check-report.xml', unHealthy: ''
         
         
     } 
