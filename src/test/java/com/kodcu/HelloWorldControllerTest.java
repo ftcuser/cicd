@@ -33,6 +33,11 @@ public class HelloWorldControllerTest {
 
 }
 */
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = SpringBootHelloWorldApplication.class )
+@WebAppConfiguration
+
 public class HelloWorldControllerTest {
 
     @Autowired
