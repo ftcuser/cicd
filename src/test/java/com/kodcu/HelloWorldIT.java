@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-public class WebIntegrationTest {
+public class HelloWorldIT {
 
 	private String Seleniumhub = "http://ec2-34-232-13-73.compute-1.amazonaws.com:4444/wd/hub";
 	private String baseUrl =  "http://ec2-34-232-13-73.compute-1.amazonaws.com:8090";
