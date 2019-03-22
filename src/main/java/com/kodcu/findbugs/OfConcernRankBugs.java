@@ -32,4 +32,8 @@ public class OfConcernRankBugs {
 		OfConcernRankBugs object = (OfConcernRankBugs) obj;
 		return this.getPlaceHolder().equals(object.getPlaceHolder());
 	}
+	
+	    public static void main(String[] args){
+           }
+
 }
